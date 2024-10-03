@@ -3,11 +3,13 @@ import wollok.game.*
 class Maiz {
     var property position
     var property image = "corn_baby.png"
-	var property estado 
 
     method regar() {
         self.image("corn_adult.png")
-    }
+	}
+	method esPlanta(){
+		return true
+	}
 }
 class Trigo {
     var property position
@@ -16,6 +18,10 @@ class Trigo {
     method regar() {
         //
     }
+	
+	method esPlanta(){
+		return true
+	}
 }
 class Tomaco {
     var property position
@@ -24,4 +30,8 @@ class Tomaco {
     method regar() {
         //
     }
+	
+	method esPlanta(){
+		return true
+	}
 }

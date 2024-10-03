@@ -42,6 +42,7 @@ object hector {
 	method regar(){
 		self.verificarSiHayPlanta()
 		
+		
 	}
 	method verificarSiHayPlanta(){
 		if (not (game.colliders(self).any({ elem => elem.esPlanta() }))){
