@@ -24,16 +24,16 @@ object hector {
 
 	method sembrarMaiz(){
 		self.verificarSiPuedeSembrar()
-			game.addVisual(new Maiz(position = position) )
+			game.addVisual(new Maiz(position = position))
 	}
 	method sembrarTrigo(){
-
+		
 	}
 	method sembrarTomacco(){
 	
 	}
 	method verificarSiPuedeSembrar(){
-		if  (game.colliders(self) > 0){
+		if  ((game.colliders(self)).size() > 0){
 			self.error("Esta parcela esta ocupada")
 		}
 	}

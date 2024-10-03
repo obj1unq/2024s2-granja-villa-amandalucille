@@ -1,10 +1,10 @@
 import wollok.game.*
 
 class Maiz {
-	var property position = game.at(1,1)
-	var property etapa = evolMaizBebe 
+    var property position
+    var property image = "corn_baby.png"
 
-	method estadoDeCrecimiento(){
-		
-	} 
+    method regar() {
+        self.image("corn_adult.png")
+    }
 }

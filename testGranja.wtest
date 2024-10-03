@@ -1,8 +1,8 @@
-import cultivos
+import cultivos.*
 
-describe "group of tests for pepita" {
+describe "sdasdasdasdasdsa" {
 
-  test "pepita has initial energy" {
+  test "dasdasdsadasdsa" {
     //
-
+  }
 }

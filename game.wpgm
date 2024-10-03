@@ -11,7 +11,6 @@ program farmville {
 
 	//  VISUALES
  	game.addVisualCharacter(hector)
- 	game.addVisual(new Maiz()) // Se agrega a modo de prueba
  	
 	// CONTROLES
 	keyboard.left().onPressDo({hector.irHaciaLaIzq()})
@@ -21,7 +20,7 @@ program farmville {
 	keyboard.m().onPressDo({hector.sembrarMaiz()})
 	keyboard.t().onPressDo({hector.sembrarTrigo()})
 	keyboard.o().onPressDo({hector.sembrarTrigo()})
-	
+
  	//  COMIENZA
 	game.start()
 }
