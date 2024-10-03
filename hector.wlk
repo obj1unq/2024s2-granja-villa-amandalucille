@@ -23,18 +23,30 @@ object hector {
 	}
 
 	method sembrarMaiz(){
-		self.verificarSiPuedeSembrar()
+		self.verificarEspacioEnParcela()
 			game.addVisual(new Maiz(position = position))
 	}
 	method sembrarTrigo(){
-		
+		self.verificarEspacioEnParcela()
+			game.addVisual(new Trigo(position = position))
 	}
-	method sembrarTomacco(){
-	
+	method sembrarTomaco(){
+		self.verificarEspacioEnParcela()
+			game.addVisual(new Tomaco(position = position))
 	}
-	method verificarSiPuedeSembrar(){
+	method verificarEspacioEnParcela(){
 		if  ((game.colliders(self)).size() > 0){
 			self.error("Esta parcela esta ocupada")
 		}
 	}
+	method regar(){
+		self.verificarSiHayPlanta()
+		
+	}
+	method verificarSiHayPlanta(){
+		if (not (game.colliders(self).any({ elem => elem.esPlanta() }))){
+			self.error("No tengo nada para regar")
+		}
+	}
+
 }

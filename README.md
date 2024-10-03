@@ -47,7 +47,7 @@ Si no hay una planta, tirar una excepción indicando "no tengo nada para regar".
 
 Qué pasa cuando se riega una planta: 
 
-| Planta | Efecto al ser regada |
+| Planta     | Efecto al ser regada |
 |---|---|
 | **Maíz**   | Si es bebé, pasa a adulta, y la imagen cambia a `corn_adult.png`. <br> Si ya es adulta, no hacer nada |
 | **Trigo**  | Pasa a la etapa de evolución siguiente: de 0 a 1, de 1 a 2, de 2 a 3, de 3 vuelve a 0. <br> La imagen cambia a `wheat_x.png`, donde la x corresponde a la etapa de evolución. |

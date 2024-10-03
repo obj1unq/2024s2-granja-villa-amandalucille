@@ -19,7 +19,7 @@ program farmville {
 	keyboard.down().onPressDo({hector.irHaciaAbajo()})
 	keyboard.m().onPressDo({hector.sembrarMaiz()})
 	keyboard.t().onPressDo({hector.sembrarTrigo()})
-	keyboard.o().onPressDo({hector.sembrarTrigo()})
+	keyboard.o().onPressDo({hector.sembrarTomaco()})
 
  	//  COMIENZA
 	game.start()
