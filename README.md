@@ -9,7 +9,7 @@ Nuestro objetivo es construir un juego en el que podamos controlar a héctor,
 utilizando el teclado para moverlo alrededor del tablero. 
 
 RECORDAR realizar los test correspondientes para los requerimientos dados. 
-Al final del readme se encuantra un apartado sobre el testeo del juego.
+Al final del readme se encuentra un apartado sobre el testeo del juego.
 
 En este juego consideramos tres especies: _maíz_, _trigo_ y _tomaco_. 
 
