@@ -12,8 +12,8 @@ object granja {
 	}
 
     method verificarSiHayPlanta(position){
-		if  ((sembrado.find({elem => elem.position(position)}))){
-			hector.error("No hay planta en esta parcela")
+		if  ((sembrado.any({elem => elem.position(position)}))){
+			hector.error("No tengo nada para regar")
 		}
 	}
 }

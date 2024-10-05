@@ -47,8 +47,8 @@ object hector {
 
 	}
 	
-	method regar(){
-		granja.verificarSiHayPlanta(position)
+	method regarParcelaActual(){
+		granja.verificarSiHayPlanta(self.position())
 		
 		
 	}
