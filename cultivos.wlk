@@ -14,11 +14,11 @@ class Maiz {
 class Trigo {
     var property position
     var property image = "wheat_0.png"
+    var property etapa = 0
 
     method regar() {
-        if (image == "wheat_0.png"){
-            image = "wheat_1.png"
-        }
+         etapa = (etapa + 1) % 4 
+         image = "wheat_" + etapa + ".png"
     }
 	method esPlanta(){
 		return true
