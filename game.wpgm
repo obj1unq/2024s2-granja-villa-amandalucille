@@ -21,6 +21,7 @@ program farmville {
 	keyboard.t().onPressDo({hector.sembrarTrigo()})
 	keyboard.o().onPressDo({hector.sembrarTomaco()})
 	keyboard.r().onPressDo({hector.regarParcelaSiPuede()})
+	keyboard.c().onPressDo({hector.cosecharParcelaSiPuede()})
 
  	//  COMIENZA
 	game.start()

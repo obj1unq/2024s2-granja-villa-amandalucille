@@ -3,7 +3,8 @@ import cultivos.*
 import hector.*
 
 object granja {
-    const property sembrado = #{}
+    const property sembrado  = #{}
+	const property cosechado = #{}
 
    method verificarEspacioEnParcela(posicion){
 		if(sembrado.any({elem => elem.position() == posicion})){
@@ -19,4 +20,6 @@ object granja {
 			hector.error("No tengo nada para regar")
 		}
 	}
+	
 }
+	

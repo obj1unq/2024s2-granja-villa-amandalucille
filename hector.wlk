@@ -23,6 +23,10 @@ object hector {
 		position = game.at(position.x(), (0).max(position.y() - 1))
 	}
 
+	method esPlanta(){
+		return false
+	}
+
 	method sembrarMaiz(){
 		const maiz = new Maiz(position = self.position())
 		
@@ -52,10 +56,17 @@ object hector {
 	}
 	method regarPlanta(){
 		const plantaEnParcela = (self.position().allElements()).find({obj => obj.esPlanta()})
-
 		plantaEnParcela.regar()
 	}
-	method esPlanta(){
-		return false
+	method cosecharParcelaSiPuede(){
+		granja.verificarSiHayPlanta(self.position())
+		self.cosecharPlantaSiPuede()
 	}
-}
+	method cosecharPlantaSiPuede(){
+		const plantaEnParcela = (self.position().allElements()).find({obj => obj.esPlanta()})
+		
+		plantaEnParcela.verificarSiEstaListaParaCosecha()
+		granja.cosechado().add(plantaEnParcela)
+		game.removeVisual(plantaEnParcela)
+		}
+	}

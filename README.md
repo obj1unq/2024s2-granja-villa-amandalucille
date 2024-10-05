@@ -63,7 +63,8 @@ Otra vez, si no hay ninguna planta, tirar una excepción indicando "no tengo nad
 Si hay una planta, puede o no estar lista para la cosecha.
 El _maíz_ está listo para la cosecha si es adulto, el _trigo_ si está en nivel de evolución 2 o más, el _tomaco_ siempre.
 
-Si la planta está lista para la cosecha, se la cosecha, para luego poder venderla. Héctor debe recordar qué plantas tiene para vender. El acto de cosechar una planta implica que desaparece del juego.  
+Si la planta está lista para la cosecha, se la cosecha, para luego poder venderla. Héctor debe recordar qué plantas tiene para vender. 
+El acto de cosechar una planta implica que desaparece del juego.  
 Caso contrario, no se hace nada.
 
 **Nota**  
