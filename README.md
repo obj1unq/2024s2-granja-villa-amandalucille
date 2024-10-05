@@ -9,7 +9,7 @@ Nuestro objetivo es construir un juego en el que podamos controlar a héctor,
 utilizando el teclado para moverlo alrededor del tablero. 
 
 RECORDAR realizar los test correspondientes para los requerimientos dados. 
-Al final del readme se encuantra un apartado sobre el testeo del juego.
+Al final del readme se encuentra un apartado sobre el testeo del juego.
 
 En este juego consideramos tres especies: _maíz_, _trigo_ y _tomaco_. 
 
@@ -47,7 +47,7 @@ Si no hay una planta, tirar una excepción indicando "no tengo nada para regar".
 
 Qué pasa cuando se riega una planta: 
 
-| Planta | Efecto al ser regada |
+| Planta     | Efecto al ser regada |
 |---|---|
 | **Maíz**   | Si es bebé, pasa a adulta, y la imagen cambia a `corn_adult.png`. <br> Si ya es adulta, no hacer nada |
 | **Trigo**  | Pasa a la etapa de evolución siguiente: de 0 a 1, de 1 a 2, de 2 a 3, de 3 vuelve a 0. <br> La imagen cambia a `wheat_x.png`, donde la x corresponde a la etapa de evolución. |
@@ -63,7 +63,8 @@ Otra vez, si no hay ninguna planta, tirar una excepción indicando "no tengo nad
 Si hay una planta, puede o no estar lista para la cosecha.
 El _maíz_ está listo para la cosecha si es adulto, el _trigo_ si está en nivel de evolución 2 o más, el _tomaco_ siempre.
 
-Si la planta está lista para la cosecha, se la cosecha, para luego poder venderla. Héctor debe recordar qué plantas tiene para vender. El acto de cosechar una planta implica que desaparece del juego.  
+Si la planta está lista para la cosecha, se la cosecha, para luego poder venderla. Héctor debe recordar qué plantas tiene para vender. 
+El acto de cosechar una planta implica que desaparece del juego.  
 Caso contrario, no se hace nada.
 
 **Nota**  
@@ -82,7 +83,8 @@ Al hacerlo, obtiene el oro por cada planta que tiene, de acuerdo a esta especifi
 - **Trigo**: 100 monedas si está en etapa 2, 200 si está en etapa 3. La cuenta cheta es `(etapa - 1) * 100`.
 - **Tomaco**: 80 monedas por planta.
 
-Héctor debe acumular el oro y recordar cuánto oro obtuvo en total. Al presionar la barra espaciadora, queremos que Héctor nos diga: cuántas plantas tiene para vender, y cuánto oro juntó en total.  
+Héctor debe acumular el oro y recordar cuánto oro obtuvo en total. Al presionar la barra espaciadora, queremos que Héctor nos diga: cuántas plantas tiene para vender
+, y cuánto oro juntó en total.  
 P.ej. "tengo 800 monedas, y 3 plantas para vender".
 
 **Atenti**  

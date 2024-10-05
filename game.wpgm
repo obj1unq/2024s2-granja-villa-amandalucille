@@ -11,8 +11,20 @@ program farmville {
 
 	//  VISUALES
  	game.addVisualCharacter(hector)
- 	game.addVisual(new Maiz()) // Se agrega a modo de prueba
  	
+	// CONTROLES
+	keyboard.left().onPressDo({hector.irHaciaLaIzq()})
+	keyboard.right().onPressDo({hector.irHaciaLaDer()})
+	keyboard.up().onPressDo({hector.irHaciaArriba()})
+	keyboard.down().onPressDo({hector.irHaciaAbajo()})
+	keyboard.m().onPressDo({hector.sembrarMaiz()})
+	keyboard.t().onPressDo({hector.sembrarTrigo()})
+	keyboard.o().onPressDo({hector.sembrarTomaco()})
+	keyboard.r().onPressDo({hector.regarParcelaSiPuede()})
+	keyboard.c().onPressDo({hector.cosecharParcelaSiPuede()})
+	keyboard.v().onPressDo({hector.venderStock()})
+	keyboard.space().onPressDo({hector.mostrarEstadoDeStockYVentas()})
+
  	//  COMIENZA
 	game.start()
 }
