@@ -11,8 +11,11 @@ object granja {
 		}
 	}
 
-    method verificarSiHayPlanta(position){
-		if  (not (game.getObjectsIn(position).any({obj => obj.esPlanta()}))){
+    method verificarSiHayPlanta(posicion){
+		
+		const elementosEnPosicionActual = game.getObjectsIn(posicion)
+
+		if  (elementosEnPosicionActual.filter({obj => obj.esPlanta()}).isEmpty()){
 			hector.error("No tengo nada para regar")
 		}
 	}

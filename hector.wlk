@@ -47,13 +47,13 @@ object hector {
 	}
 	
 	method regarParcela(){
-		const plantaEnParcela = (self.position().allElements()).find({obj => obj.esPlanta()})
-
 		granja.verificarSiHayPlanta(self.position())
+		
+		
+		const plantaEnParcela = (self.position().allElements()).find({obj => obj.esPlanta()})
 		plantaEnParcela.regar()
 	}
 	method esPlanta(){
 		return false
 	}
-
 }
