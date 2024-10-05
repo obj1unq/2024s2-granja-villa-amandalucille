@@ -40,18 +40,20 @@ object hector {
 	method sembrarTomaco(){
 		const tomaco = new Tomaco(position = self.position())
 
-
 		granja.verificarEspacioEnParcela(self.position())
 			game.addVisual(tomaco)
 			granja.sembrado().add(tomaco)
 
 	}
 	
-	method regarParcelaActual(){
+	method regarParcela(){
+		const plantaEnParcela = (self.position().allElements()).find({obj => obj.esPlanta()})
+
 		granja.verificarSiHayPlanta(self.position())
-		
-		
+		plantaEnParcela.regar()
 	}
-	
+	method esPlanta(){
+		return false
+	}
 
 }

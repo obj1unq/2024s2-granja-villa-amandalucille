@@ -7,7 +7,7 @@ class Maiz {
     method regar() {
         self.image("corn_adult.png")
 	}
-	method esPlanta(){
+    method esPlanta(){
 		return true
 	}
 }
@@ -16,12 +16,14 @@ class Trigo {
     var property image = "wheat_0.png"
 
     method regar() {
-        //
+        if (image == "wheat_0.png"){
+            image = "wheat_1.png"
+        }
     }
-	
 	method esPlanta(){
 		return true
 	}
+
 }
 class Tomaco {
     var property position

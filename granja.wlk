@@ -12,7 +12,7 @@ object granja {
 	}
 
     method verificarSiHayPlanta(position){
-		if  ((sembrado.any({elem => elem.position(position)}))){
+		if  (not (game.getObjectsIn(position).any({obj => obj.esPlanta()}))){
 			hector.error("No tengo nada para regar")
 		}
 	}
