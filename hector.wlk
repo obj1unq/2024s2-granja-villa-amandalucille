@@ -16,7 +16,7 @@ object hector {
 	}
 
 	method irHaciaArriba(){
-		position = game.at(position.x(), (position.y() + 1).min(game.width() - 1))
+		position = game.at(position.x(), (position.y() + 1).min(game.height() - 1))
 	}
 
 	method irHaciaAbajo(){
@@ -46,11 +46,13 @@ object hector {
 
 	}
 	
-	method regarParcela(){
+	method regarParcelaSiPuede(){
 		granja.verificarSiHayPlanta(self.position())
-		
-		
+		self.regarPlanta()
+	}
+	method regarPlanta(){
 		const plantaEnParcela = (self.position().allElements()).find({obj => obj.esPlanta()})
+
 		plantaEnParcela.regar()
 	}
 	method esPlanta(){
