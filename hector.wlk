@@ -25,17 +25,26 @@ object hector {
 
 	method sembrarMaiz(){
 		const maiz = new Maiz(position = self.position())
-		granja.verificarEspacioEnParcela(position)
+		
+		granja.verificarEspacioEnParcela(self.position())
 			game.addVisual(maiz)
 			granja.sembrado().add(maiz)
 	}
 	method sembrarTrigo(){
-		granja.verificarEspacioEnParcela(position)
-			game.addVisual(new Trigo(position = position))
+		const trigo = new Trigo(position = self.position())
+
+		granja.verificarEspacioEnParcela(self.position())
+			game.addVisual(trigo)
+			granja.sembrado().add(trigo)
 	}
 	method sembrarTomaco(){
-		granja.verificarEspacioEnParcela(position)
-			game.addVisual(new Tomaco(position = position))
+		const tomaco = new Tomaco(position = self.position())
+
+
+		granja.verificarEspacioEnParcela(self.position())
+			game.addVisual(tomaco)
+			granja.sembrado().add(tomaco)
+
 	}
 	
 	method regar(){

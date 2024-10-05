@@ -5,15 +5,16 @@ import hector.*
 object granja {
     const property sembrado = #{}
 
-   method verificarEspacioEnParcela(position){
-		if  ((sembrado.find({elem => elem.position(position)}))){
+   method verificarEspacioEnParcela(posicion){
+		if(sembrado.any({elem => elem.position() == posicion})){
 			self.error("Esta parcela esta ocupada")
+			game.say(self, "Esta parcela esta ocupada")
 		}
 	}
 
     method verificarSiHayPlanta(position){
-		if (not (game.colliders(self).any({ elem => elem.esPlanta() }))){
-			self.error("No tengo nada para regar")
+		if  ((sembrado.find({elem => elem.position(position)}))){
+			self.error("No hay planta en esta parcela")
 		}
 	}
 }
