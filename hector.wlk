@@ -49,7 +49,6 @@ object hector {
 		granja.verificarEspacioEnParcela(self.position())
 			game.addVisual(tomaco)
 			granja.sembrado().add(tomaco)
-
 	}
 	
 	method regarParcelaSiPuede(){
@@ -70,6 +69,7 @@ object hector {
 		plantaEnParcela.verificarSiEstaListaParaCosecha()
 		self.stock().add(plantaEnParcela)
 		game.removeVisual(plantaEnParcela)
+		granja.sembrado.remove(plantaEnParcela)
 		}
 	method venderStock(){
 			stock.forEach({cosecha => ganancias = ganancias + cosecha.costoPorUnidad()})
