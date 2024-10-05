@@ -22,6 +22,8 @@ program farmville {
 	keyboard.o().onPressDo({hector.sembrarTomaco()})
 	keyboard.r().onPressDo({hector.regarParcelaSiPuede()})
 	keyboard.c().onPressDo({hector.cosecharParcelaSiPuede()})
+	keyboard.v().onPressDo({hector.venderStock()})
+	keyboard.space().onPressDo({hector.mostrarEstadoDeStockYVentas()})
 
  	//  COMIENZA
 	game.start()

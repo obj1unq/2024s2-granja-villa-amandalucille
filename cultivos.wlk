@@ -18,6 +18,9 @@ class Maiz {
     method esPlantaListaParaCosecha(){
         return image != "corn_baby.png"
     }
+    method costoPorUnidad(){
+        return 150
+    }
 }
 
 class Trigo {
@@ -39,6 +42,9 @@ class Trigo {
     }
     method esPlantaListaParaCosecha(){
         return etapa >= 2
+    }
+    method costoPorUnidad(){
+        return (etapa - 1) * 100
     }
 }
 class Tomaco {
@@ -69,5 +75,8 @@ class Tomaco {
     }
     method esPlantaListaParaCosecha(){
         return true
+    }
+    method costoPorUnidad(){
+        return 80
     }
 }

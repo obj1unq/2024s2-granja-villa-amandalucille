@@ -4,7 +4,6 @@ import hector.*
 
 object granja {
     const property sembrado  = #{}
-	const property cosechado = #{}
 
    method verificarEspacioEnParcela(posicion){
 		if(sembrado.any({elem => elem.position() == posicion})){
@@ -17,7 +16,7 @@ object granja {
 		const elementosEnPosicionActual = game.getObjectsIn(posicion)
 
 		if  (elementosEnPosicionActual.filter({obj => obj.esPlanta()}).isEmpty()){
-			hector.error("No tengo nada para regar")
+			hector.error("No hay planta")
 		}
 	}
 	

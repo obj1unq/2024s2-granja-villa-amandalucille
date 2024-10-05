@@ -3,8 +3,10 @@ import cultivos.*
 import granja.*
 
 object hector {
-	var property position = game.center()
-	const property image = "player.png"
+	var property position    = game.center()
+	const property image     = "player.png"
+	const property stock     = #{}
+	var property ganancias = 0
 
 	method irHaciaLaIzq(){
 		position = game.at(0.max(position.x() - 1), position.y()) // position.x() obtiene la coordenada x actual de la posición de Héctor y position.y() la coordenada y actual de Hector.
@@ -66,7 +68,14 @@ object hector {
 		const plantaEnParcela = (self.position().allElements()).find({obj => obj.esPlanta()})
 		
 		plantaEnParcela.verificarSiEstaListaParaCosecha()
-		granja.cosechado().add(plantaEnParcela)
+		self.stock().add(plantaEnParcela)
 		game.removeVisual(plantaEnParcela)
+		}
+	method venderStock(){
+			stock.forEach({cosecha => ganancias = ganancias + cosecha.costoPorUnidad()})
+			stock.clear()
+		}
+	method mostrarEstadoDeStockYVentas(){
+		game.say(self, "tengo" + " " + ganancias + " " + "monedas" + " " + "y" + " " + stock.size() + " " + "plantas" + " " + "para vender")
 		}
 	}
