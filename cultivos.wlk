@@ -30,17 +30,20 @@ class Tomaco {
     var property image = "tomaco.png"
 
     method regar() {
-        self.plantarEnLaCeldaDeArribaSiPuede()
+        self.plantarArribaSiPuede()
     }
-    method plantarEnLaCeldaDeArribaSiPuede(){
-        const posicionAlSerRegado = (game.at(position.x(), position.y() + 1))
-        const tomaco = new Tomaco(position = posicionAlSerRegado)
-
+    method plantarArribaSiPuede(){
         if (position.y() < game.height() - 1){
-            game.removeVisual(position)
-            game.addVisual(tomaco)
+            const posicionAlSerRegado = (game.at(position.x(), position.y() + 1))
+                game.removeVisual(position)
+                self.plantarArriba(posicionAlSerRegado)            
         }
     }
+    method plantarArriba(nuevaPosicion){
+                const tomaco = new Tomaco(position = nuevaPosicion)
+                game.addVisual(tomaco)
+        }
+        
 	
 	method esPlanta(){
 		return true
