@@ -7,14 +7,13 @@ object granja {
 
    method verificarEspacioEnParcela(posicion){
 		if(sembrado.any({elem => elem.position() == posicion})){
-			self.error("Esta parcela esta ocupada")
-			game.say(self, "Esta parcela esta ocupada")
+			hector.error("Esta parcela está ocupada")
 		}
 	}
 
     method verificarSiHayPlanta(position){
 		if  ((sembrado.find({elem => elem.position(position)}))){
-			self.error("No hay planta en esta parcela")
+			hector.error("No hay planta en esta parcela")
 		}
 	}
 }
