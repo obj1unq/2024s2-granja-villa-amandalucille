@@ -1,5 +1,6 @@
 import wollok.game.*
 import cultivos.*
+import granja.*
 
 object hector {
 	var property position = game.center()
@@ -23,31 +24,25 @@ object hector {
 	}
 
 	method sembrarMaiz(){
-		self.verificarEspacioEnParcela()
-			game.addVisual(new Maiz(position = position))
+		const maiz = new Maiz(position = self.position())
+		granja.verificarEspacioEnParcela(position)
+			game.addVisual(maiz)
+			granja.sembrado().add(maiz)
 	}
 	method sembrarTrigo(){
-		self.verificarEspacioEnParcela()
+		granja.verificarEspacioEnParcela(position)
 			game.addVisual(new Trigo(position = position))
 	}
 	method sembrarTomaco(){
-		self.verificarEspacioEnParcela()
+		granja.verificarEspacioEnParcela(position)
 			game.addVisual(new Tomaco(position = position))
 	}
-	method verificarEspacioEnParcela(){
-		if  ((game.colliders(self)).size() > 0){
-			self.error("Esta parcela esta ocupada")
-		}
-	}
+	
 	method regar(){
-		self.verificarSiHayPlanta()
+		granja.verificarSiHayPlanta(position)
 		
 		
 	}
-	method verificarSiHayPlanta(){
-		if (not (game.colliders(self).any({ elem => elem.esPlanta() }))){
-			self.error("No tengo nada para regar")
-		}
-	}
+	
 
 }
